@@ -39,12 +39,12 @@ pub fn execute(
     msg: ExecuteMsg,
 ) -> Result<Response, ContractError> {
     match msg {
-        ExecuteMsg::Increment {} => try_increment(deps),
-        ExecuteMsg::Reset { count } => try_reset(deps, info, count),
+        ExecuteMsg::Mint {} => try_mint(deps),
+        ExecuteMsg::Burn { amount } => try_reset(deps, info, amount),
     }
 }
 
-pub fn try_increment(deps: DepsMut) -> Result<Response, ContractError> {
+pub fn try_mint(deps: DepsMut) -> Result<Response, ContractError> {
     STATE.update(deps.storage, |mut state| -> Result<_, ContractError> {
         state.count += 1;
         Ok(state)
