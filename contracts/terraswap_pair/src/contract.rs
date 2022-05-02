@@ -1,7 +1,7 @@
 use crate::error::ContractError;
 use crate::response::MsgInstantiateContractResponse;
 use crate::state::PAIR_INFO;
-
+// NDAU token pair pool
 #[cfg(not(feature = "library"))]
 use cosmwasm_std::entry_point;
 
