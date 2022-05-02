@@ -25,7 +25,7 @@ use terraswap::token::InstantiateMsg as TokenInstantiateMsg;
 
 const INSTANTIATE_REPLY_ID: u64 = 1;
 
-/// Commission rate == 0.3%
+/// Commission rate == 0.300%
 const COMMISSION_RATE: &str = "0.003";
 #[cfg_attr(not(feature = "library"), entry_point)]
 pub fn instantiate(
